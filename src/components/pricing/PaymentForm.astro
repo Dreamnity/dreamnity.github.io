@@ -41,6 +41,32 @@
           />
         </div>
 
+        <div>
+          <label for="tier" class="sr-only">Tier</label>
+          <select
+            name="Tier"
+            id="tier"
+            class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
+          >
+            <option value="basic">Basic - $10</option>
+            <option value="pro">Pro - $25</option>
+            <option value="team" disabled>Team - Custom</option>
+          </select>
+        </div>
+        <div>
+          <label for="item" class="sr-only">Item</label>
+          <select
+            name="Item"
+            id="item"
+            class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
+          >
+            <option value="gfx">GFX</option>
+            <option value="bot">Discord Bot</option>
+
+            <option value="website">Website</option>
+          </select>
+        </div>
+
         <!-- Message textarea -->
         <div>
           <label for="message" class="sr-only">Message</label>
