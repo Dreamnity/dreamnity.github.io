@@ -16,6 +16,24 @@ const team = [
     job: 'Senior Developer',
   },
 ];
+
+const partner = [
+  {
+    name: 'Rahul',
+    image: '/assets/team-1.webp',
+    job: 'Senior paithiyam',
+  },
+  {
+    name: 'Orbit',
+    image: '/assets/team-2.webp',
+    job: 'Founder',
+  },
+  {
+    name: 'Orbit\'s gf',
+    image: '/assets/team-3.webp',
+    job: 'Lover girl',
+  },
+];
 ---
 
 <section class="py-16 sm:py-20">
@@ -25,12 +43,31 @@ const team = [
       <ul role="list" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {
           team.map((item) => (
-            <li class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border px-6 py-8">
+            <li class="rounded-3xl border border-primary-900/10 px-6 py-8 dark:border-primary-300/10">
               <div class="space-y-6">
                 <img class="mx-auto h-auto w-16 rounded-full" src={item.image} alt={item.name} />
                 <div class="text-center">
                   <h3 class="text-lg font-medium">{item.name}</h3>
-                  <p class="text-primary-950/70 dark:text-primary-200/70 text-base">{item.job}</p>
+                  <p class="text-base text-primary-950/70 dark:text-primary-200/70">{item.job}</p>
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="sm:space-8 space-y-12 pt-12">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our Partners</h2>
+      <ul role="list" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          partner.map((item) => (
+            <li class="rounded-3xl border border-primary-900/10 px-6 py-8 dark:border-primary-300/10">
+              <div class="space-y-6">
+                <img class="mx-auto h-auto w-16 rounded-full" src={item.image} alt={item.name} />
+                <div class="text-center">
+                  <h3 class="text-lg font-medium">{item.name}</h3>
+                  <p class="text-base text-primary-950/70 dark:text-primary-200/70">{item.job}</p>
                 </div>
               </div>
             </li>

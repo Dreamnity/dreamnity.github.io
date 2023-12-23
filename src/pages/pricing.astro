@@ -3,15 +3,130 @@ import Cta from '../components/pricing/Cta.astro';
 import Faq from '../components/pricing/Faq.astro';
 import Heading from '../components/pricing/Heading.astro';
 import PricingTable from '../components/pricing/PricingTable.astro';
+import SubHeading from '../components/pricing/SubHeading.astro';
 import Layout from '../layouts/Layout.astro';
+
+const discordbot = [
+  {
+    name: 'Basic',
+    description: 'For development, staging, and small production projects.',
+    isFlagged: true,
+    periodicity: '/month',
+    price: '$10',
+    action: 'Buy Now',
+    features: ['5 Seats', '1,000 Projects', 'Lifetime access', 'Community Support'],
+  },
+  {
+    name: 'Pro',
+    description: 'For high-scale and mission critical projects.',
+    isFlagged: true,
+    periodicity: '/month',
+    price: '$25',
+    action: 'Buy Now',
+    features: ['10 Seats', '10,000 Projects', 'Lifetime access', 'Email Support', 'Free updates'],
+  },
+  {
+    name: 'Team',
+    description: 'For teams with more security, support, and performance needs.',
+    periodicity: '',
+    price: 'Custom',
+    action: 'Buy Now',
+    features: [
+      'Unlimited Seats',
+      'Unlimited Projects',
+      'Lifetime access',
+      'Email and Chat Support',
+      'High-Performance',
+      'Free updates',
+    ],
+  },
+];
+
+const gfx = [
+  {
+    name: 'Basic',
+    description: 'For development, staging, and small production projects.',
+    isFlagged: false,
+    periodicity: '/month',
+    price: '$10',
+    action: 'Buy Now',
+    features: ['5 Seats', '1,000 Projects', 'Lifetime access', 'Community Support'],
+  },
+  {
+    name: 'Pro',
+    description: 'For high-scale and mission critical projects.',
+    isFlagged: true,
+    periodicity: '/month',
+    price: '$25',
+    action: 'Buy Now',
+    features: ['10 Seats', '10,000 Projects', 'Lifetime access', 'Email Support', 'Free updates'],
+  },
+  {
+    name: 'Team',
+    description: 'For teams with more security, support, and performance needs.',
+    periodicity: '',
+    price: 'Custom',
+    action: 'Buy Now',
+    features: [
+      'Unlimited Seats',
+      'Unlimited Projects',
+      'Lifetime access',
+      'Email and Chat Support',
+      'High-Performance',
+      'Free updates',
+    ],
+  },
+];
+
+const web = [
+  {
+    name: 'Basic',
+    description: 'For development, staging, and small production projects.',
+    isFlagged: false,
+    periodicity: '/month',
+    price: '$10',
+    action: 'Buy Now',
+    features: ['5 Seats', '1,000 Projects', 'Lifetime access', 'Community Support'],
+  },
+  {
+    name: 'Pro',
+    description: 'For high-scale and mission critical projects.',
+    isFlagged: true,
+    periodicity: '/month',
+    price: '$25',
+    action: 'Buy Now',
+    features: ['10 Seats', '10,000 Projects', 'Lifetime access', 'Email Support', 'Free updates'],
+  },
+  {
+    name: 'Team',
+    description: 'For teams with more security, support, and performance needs.',
+    periodicity: '',
+    price: 'Custom',
+    action: 'Buy Now',
+    features: [
+      'Unlimited Seats',
+      'Unlimited Projects',
+      'Lifetime access',
+      'Email and Chat Support',
+      'High-Performance',
+      'Free updates',
+    ],
+  },
+];
+
 ---
 
 <Layout
   description="Find the pricing plan that best fits your needs. Plans include seats, projects, support and more"
-  title="Pricing · Stone"
+  title="Pricing · Dreamnity"
 >
   <Heading />
-  <PricingTable />
+  <SubHeading title={"Graphic Design"}/>
+  <PricingTable array={gfx} />
+  <SubHeading title={"Discord Bot"} />
+  <PricingTable array={discordbot} />
+  <SubHeading title={"Web Services"} />
+  <PricingTable array={web} />
   <Faq />
   <Cta />
 </Layout>
