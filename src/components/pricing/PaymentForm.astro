@@ -1,15 +1,27 @@
+---
+const { array } = Astro.props;
+---
+<script>
+  const compo = document.getElementById('text');
+  const input = document.getElementById('item');
+  const type = (new window.URLSearchParams(location.search)).get('type')||'';
+  if(!type) location.href = '/pricing';
+  compo.textContent = compo.textContent.replace('[loading]',type);
+  eval('input.value = type');
+</script>
+
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
       <div class="flex flex-col gap-4 sm:gap-6">
         <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Get in touch</h2>
-        <p class="max-w-lg text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
-          Provide us with more information to make transaction.
+        <p id='text' class="max-w-lg text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+          Provide us with more information to make transaction on [loading].
         </p>
       </div>
       <form
-        action="https://getform.io/f/d1b0a776-995f-4aec-b4f2-1681d06a9038"
-        method="POST"
+        action="https://cfwwebhook.dreamnity.in" --
+        method="GET"
         class="mt-3 flex flex-col gap-y-6"
       >
         <!-- Full name input -->
@@ -40,31 +52,14 @@
             placeholder="Email"
           />
         </div>
-
-        <div>
-          <label for="tier" class="sr-only">Tier</label>
-          <select
-            name="Tier"
-            id="tier"
-            class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
-          >
-            <option value="basic">Basic - $10</option>
-            <option value="pro">Pro - $25</option>
-            <option value="team" disabled>Team - Custom</option>
-          </select>
-        </div>
-        <div>
+        <div hidden>
           <label for="item" class="sr-only">Item</label>
-          <select
+          <input
             name="Item"
             id="item"
             class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
-          >
-            <option value="gfx">GFX</option>
-            <option value="bot">Discord Bot</option>
-
-            <option value="website">Website</option>
-          </select>
+            value='invalid'
+          />
         </div>
 
         <!-- Message textarea -->
@@ -87,6 +82,7 @@
           </button>
         </div>
       </form>
+      You will be prompt to enter our discord server, this is to track and manage the order.
     </div>
   </div>
 </section>
