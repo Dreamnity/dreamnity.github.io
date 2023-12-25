@@ -1,12 +1,13 @@
 ---
 const { array } = Astro.props;
 ---
+
 <script>
   const compo = document.getElementById('text');
   const input = document.getElementById('item');
-  const type = (new window.URLSearchParams(location.search)).get('type')||'';
-  if(!type) location.href = '/pricing';
-  compo.textContent = compo.textContent.replace('[loading]',type);
+  const type = new window.URLSearchParams(location.search).get('type') || '';
+  if (!type) location.href = '/pricing';
+  compo.textContent = compo.textContent.replace('[loading]', type);
   eval('input.value = type');
 </script>
 
@@ -15,7 +16,10 @@ const { array } = Astro.props;
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
       <div class="flex flex-col gap-4 sm:gap-6">
         <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Get in touch</h2>
-        <p id='text' class="max-w-lg text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+        <p
+          id="text"
+          class="max-w-lg text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl"
+        >
           Provide us with more information to make transaction on [loading].
         </p>
       </div>
@@ -54,13 +58,26 @@ const { array } = Astro.props;
             required
           />
         </div>
+
+        <!-- Discord username input -->
+        <div>
+          <label for="email" class="sr-only">Discord Username</label>
+          <input
+            type="text"
+            name="discordusername"
+            id="discordusername"
+            autocomplete="discordusername"
+            class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
+            placeholder="Your discord username"
+          />
+        </div>
         <div hidden>
           <label for="item" class="sr-only">Item</label>
           <input
             name="Item"
             id="item"
             class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-900/40 transition placeholder:text-primary-950/60 hover:ring-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
-            value='invalid'
+            value="invalid"
           />
         </div>
 
@@ -75,7 +92,7 @@ const { array } = Astro.props;
             placeholder="Additional infos like:
 - color
 - style"
-            required/>
+            required></textarea>
         </div>
 
         <div>
@@ -87,7 +104,7 @@ const { array } = Astro.props;
           </button>
         </div>
       </form>
-      You will be prompt to enter our discord server, this is to track and manage the order.
+       You will be prompt to enter our discord server, this is to track and manage the order.
     </div>
   </div>
 </section>
