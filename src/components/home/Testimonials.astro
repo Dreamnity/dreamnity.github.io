@@ -3,9 +3,18 @@ const testimonials = [
   {
     name: 'Mr.Shayan',
     description: 'System Admin @ Sneaky Nodes',
-    image: 'https://cdn.discordapp.com/attachments/1177993413333885111/1188438688858910741/e52bcedd55e0fb7a272ce1c7d666caea.png?ex=659a86c7&is=658811c7&hm=466d4db7f6177c53b89371c3daf45d9dc3f9362c356c6bfa796c97da2f1645f8&',
+    image:
+      'https://cdn.discordapp.com/attachments/1177993413333885111/1188438688858910741/e52bcedd55e0fb7a272ce1c7d666caea.png?ex=659a86c7&is=658811c7&hm=466d4db7f6177c53b89371c3daf45d9dc3f9362c356c6bfa796c97da2f1645f8&',
     message:
       'Dreamnity is an amazing orgnaisation with good staff; delivers their promise with their full efforts. Dreamnity ensures the best care of their members and their clients. Dreamnity is not only a server where a person can utilize their resources, but is also a server where they can learn stuff.',
+  },
+  {
+    name: 'Syniez',
+    description: 'Director @ Ryxus',
+    image:
+    'https://cdn.discordapp.com/attachments/1177993413333885111/1188737158119432283/06b0c2e426d90273fad40651a030dc65.png?ex=659b9cc0&is=658927c0&hm=232d38c89f7c4fe4d28368202c26876c8cb78a7bfbe3280a4813473b563ba15d&0',
+    message: `"Dreamnity is an upcoming and thrilling community for developers and designers alike.
+They show promise and I'm looking forward to seeing them reach milestones in the future!"`,
   },
 ];
 ---
@@ -17,7 +26,7 @@ const testimonials = [
         Trusted by many professionals
       </h2>
       <div
-        class="divide-primary-900/10 dark:divide-primary-300/10 grid divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+        class="grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
       >
         {
           testimonials.map((testimonial) => (
@@ -25,7 +34,7 @@ const testimonials = [
               <div class="flex flex-row gap-2">
                 {[...Array(3)].map(() => (
                   <svg
-                    class="text-primary-600 dark:text-primary-400 h-6 w-6"
+                    class="h-6 w-6 text-primary-600 dark:text-primary-400"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -35,14 +44,14 @@ const testimonials = [
                   </svg>
                 ))}
               </div>
-              <blockquote class="text-primary-950/70 dark:text-primary-200/70 text-center text-lg italic leading-loose">
+              <blockquote class="text-center text-lg italic leading-loose text-primary-950/70 dark:text-primary-200/70">
                 <p>{testimonial.message}</p>
               </blockquote>
               <figcaption class="flex flex-col gap-4">
                 <img class="mx-auto h-8 w-8 rounded-full" src={testimonial.image} alt="" />
                 <div class="text-center">
                   <div class="text-base font-medium">{testimonial.name}</div>
-                  <div class="text-primary-950/70 dark:text-primary-200/70 text-sm">
+                  <div class="text-sm text-primary-950/70 dark:text-primary-200/70">
                     {testimonial.description}
                   </div>
                 </div>
