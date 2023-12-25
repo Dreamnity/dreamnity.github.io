@@ -8,7 +8,7 @@ const { array } = Astro.props;
   const type = new window.URLSearchParams(location.search).get('type') || '';
   if (!type) location.href = '/pricing';
   compo.textContent = compo.textContent.replace('[loading]', type);
-  eval('input.value = type');
+  input.value = type
 </script>
 
 <section class="py-16 sm:py-20">
