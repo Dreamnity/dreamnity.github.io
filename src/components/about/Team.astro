@@ -2,23 +2,21 @@
 const team = [
   {
     name: 'Venkatesh S',
-    image: 'https://cdn.discordapp.com/attachments/1177993413333885111/1178296333375909908/68f892a862758560fe2fd3739067caef.png?ex=65915079&is=657edb79&hm=bd3442576a661d0eec555426899bfaea82b1004cd4e1c641d5c7a51175cdc008&',
+    image: 'https://cdn.discordapp.com/attachments/1182289636719083540/1249260011025072148/profile2.jpeg?ex=6666a78c&is=6665560c&hm=0a0f07832b6b53117ddf6857c1338a0933ce0e9d883762e6ce4ca54dd9d29b3c&',
     job: 'Chief Executive Officer',
   },
   {
     name: 'Bhuwana Tawal-unnop',
-    image: 'https://cdn.discordapp.com/attachments/1177993413333885111/1178231931658305546/3c29e7c98366d864e0f628bb9bf5673f.png?ex=659a4efe&is=6587d9fe&hm=52b64f59bee87d8e3385ed5609c2e814c57cb6e070fbd331138f4aba7e316530&',
+    image: 'https://cdn.discordapp.com/attachments/1182289636719083540/1249259955152748604/din.png?ex=6666a77f&is=666555ff&hm=3081ca3513bd14a8b36c82be302ef686c852035bd8a8d2876552b0503bc3fab7&',
+    job: 'Chief Operational Officer',
+  },
+  {
+    name: 'Rahul Marban',
+    image: 'https://cdn.discordapp.com/attachments/1182289636719083540/1249260702540238858/image.png?ex=6666a831&is=666556b1&hm=ef989df537bca4301c6df957d86946694de868ccbf5c29ea83870f5cb74619ee&',
     job: 'Chief Technology Officer',
   },
 ];
 
-const partner = [
-  {
-    name: 'Sneaky Nodes',
-    image: 'https://cdn.discordapp.com/attachments/1177993413333885111/1188436759181271060/b7b3f0103211eb651d6b62c21bda45e4.png?ex=659a84fb&is=65880ffb&hm=3ad61ad712f53aa75a1d22573dc8dd20b03edf1a6d27e066672c479b20106757&',
-    job: 'Hosting Service',
-  },
-];
 ---
 
 <section class="py-16 sm:py-20">
@@ -28,25 +26,6 @@ const partner = [
       <ul role="list" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {
           team.map((item) => (
-            <li class="rounded-3xl border border-primary-900/10 px-6 py-8 dark:border-primary-300/10">
-              <div class="space-y-6">
-                <img class="mx-auto h-auto w-16 rounded-full" src={item.image} alt={item.name} />
-                <div class="text-center">
-                  <h3 class="text-lg font-medium">{item.name}</h3>
-                  <p class="text-base text-primary-950/70 dark:text-primary-200/70">{item.job}</p>
-                </div>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-
-    <div class="sm:space-8 space-y-12 pt-12">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our Partners</h2>
-      <ul role="list" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          partner.map((item) => (
             <li class="rounded-3xl border border-primary-900/10 px-6 py-8 dark:border-primary-300/10">
               <div class="space-y-6">
                 <img class="mx-auto h-auto w-16 rounded-full" src={item.image} alt={item.name} />
